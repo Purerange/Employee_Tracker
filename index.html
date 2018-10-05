@@ -26,23 +26,40 @@
             <h2>Add Employee</h2>
             <form>
                 <div class="form-group">
-                    <label for="employeeName">Employee Name</label>
+                    <label for="nameInput">Employee Name</label>
                     <input type="text" class="form-control" id="nameInput" placeholder="Anonymous">
                 </div>
                 <div class="form-group">
-                    <label for="role">Role</label>
+                    <label for="roleInput">Role</label>
                     <input type="text" class="form-control" id="roleInput" placeholder="Hacker">
                 </div>
                 <div class="form-group">
-                    <label for="startDate">Start Date (MM/DD/YYYY)</label>
+                    <label for="dateInput">Start Date (MM/DD/YYYY)</label>
                     <input type="date" class="form-control" id="dateInput" placeholder="01/01/2000">
                 </div>
                 <div class="form-group">
-                    <label for="startDate">Monthly Rate</label>
+                    <label for="rateInput">Monthly Rate</label>
                     <input type="number" class="form-control" id="rateInput" placeholder="200000">
                 </div>
                 <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
             </form>
+        </section>
+        <section>
+            <h2>Current Employees</h2>
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Employee Name</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Start Date</th>
+                        <th scope="col">Months Worked</th>
+                        <th scope="col">Monthly Rate($)</th>
+                        <th scope="col">Total Billed($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </section>
     </main>
     <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
