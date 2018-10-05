@@ -1,3 +1,8 @@
+var name;
+var rate;
+var role;
+var start;
+
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyCk-rZaCachMxJecTttRfbZMPHC1Z0EWQA",
@@ -10,3 +15,35 @@ var config = {
 firebase.initializeApp(config);
 
 var database = firebase.database();
+
+$("#submitButton").on("click", function(event) {
+
+    event.preventDefault();
+
+    name = $("#nameInput").val().trim();
+    rate = $("#rateInput").val().trim();
+    role = $("#roleInput").val().trim();
+    start = new Date($("#dateInput").val());
+    var startValue = $("#dateInput").val();
+
+    var startYear = start.getFullYear();
+    var startMonth = start.getMonth();
+    var today = new Date();
+    var todaysYear = today.getFullYear();
+    var todaysMonth = today.getMonth();
+    var months = (todaysYear - startYear) * 12 + (todaysMonth - startMonth);
+    var earnings = months * rate;
+
+    database.ref().push({
+        name: name,
+        role: role,
+        start: startValue,
+        months: months,
+        rate: rate,
+        earnings: earnings
+    });
+
+
+    
+
+})
