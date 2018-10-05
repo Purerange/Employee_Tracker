@@ -1,3 +1,7 @@
+var name;
+var rate;
+var role;
+
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyCk-rZaCachMxJecTttRfbZMPHC1Z0EWQA",
@@ -10,3 +14,11 @@ var config = {
 firebase.initializeApp(config);
 
 var database = firebase.database();
+
+$("#submit").on("click", function(event) {
+
+    event.preventDefault();
+
+    name = $("#nameInput").val().trim();
+
+})
