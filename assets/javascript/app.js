@@ -43,6 +43,31 @@ $("#submitButton").on("click", function(event) {
         earnings: earnings
     });
 
+    var tr = $("<tr>");
+    var tdName = $("<td>");
+    var tdRole = $("<td>");
+    var tdStart = $("<td>");
+    var tdMonths = $("<td>");
+    var tdRate = $("<td>");
+    var tdEarnings = $("<td>");
+
+    tdName.text(name);
+    tdRole.text(role);
+    tdStart.text(startValue);
+    tdMonths.text(months);
+    tdRate.text(rate);
+    tdEarnings.text(earnings);
+
+    tr.append(tdName);
+    tr.append(tdRole);
+    tr.append(tdStart);
+    tr.append(tdMonths);
+    tr.append(tdRate);
+    tr.append(tdEarnings);
+
+    $(".table").append(tr);
+
+
 
     
 
